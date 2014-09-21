@@ -37,3 +37,4 @@ Long Data, Wide Data, and Tidy Data for the Assignment by David Hood: https://cl
 
 Help with using select() from HuangTao: https://class.coursera.org/getdata-007/forum/thread?thread_id=202
 
+Help with using mapvalues() from John J. Derwent: https://class.coursera.org/getdata-007/forum/thread?thread_id=229
