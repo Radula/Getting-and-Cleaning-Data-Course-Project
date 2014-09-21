@@ -1,0 +1,36 @@
+library(plyr)
+library(dplyr)
+library(reshape2)
+if (!file.exists("data")){
+  dir.create("data")
+}
+fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileurl, destfile="./data/HARdata.zip", mode="wb")
+unzip("./data/HARdata.zip")
+xtest <- read.table("./UCI HAR dataset/test/X_test.txt")
+xtrain <- read.table("./UCI HAR dataset/train/X_train.txt")
+ytest <- read.table("./UCI HAR dataset/test/y_test.txt")
+ytrain <- read.table("./UCI HAR dataset/train/y_train.txt")
+subtrain <- read.table("./UCI HAR dataset/train/subject_train.txt")
+subtest <- read.table("./UCI HAR dataset/test/subject_test.txt")
+varnames <- read.table("./UCI HAR dataset/features.txt")
+xdata <- rbind(xtest, xtrain)
+ydata <- rbind(ytest, ytrain)
+act <- mapvalues(ydata[,1], c(1:6), c("Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying"))
+actcol <- data.frame(act)
+names(actcol) <- "Activity"
+subdata <- rbind(subtrain, subtest)
+names(xdata) <- varnames[,2]
+names(subdata) <- "Subject"
+bigstuff <- cbind(xdata, actcol, subdata)
+varnames <- read.table("./UCI HAR dataset/features.txt")
+step2 <- select(bigstuff, contains("mean"), contains("std"), contains("Activity"), contains("Subject"), -starts_with("angle"))
+names(step2) <- sub("\\()", "", names(step2))
+names(step2) <- sub("mean", "Mean", names(step2))
+names(step2) <- gsub("\\-", "", names(step2))
+names(step2) <- sub("std", "StandardDeviation", names(step2))
+names(step2) <- sub("Mag", "Magnitude", names(step2))
+names(step2) <- sub("\\<t", "Time", names(step2))
+names(step2) <- sub("\\<f", "Frequency", names(step2))
+step5 <- aggregate(. ~ Activity + Subject, data = step2[,c(80,81, 1:79)], FUN = mean)
+View(step5)
