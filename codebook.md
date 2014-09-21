@@ -13,8 +13,4 @@ Additionally, variables containing "meanFreq" were retained, although they may n
 Variable Explanations
 Activity: The activity being performed by the subject. There were 6 recorded activities: walking, walking upstairs, walking downstairs, sitting, standing, and laying.
 Subject: ID number denoting the subject performing the activities and gathering data. There are 30 subjects, numbered 1-30.
-Time...(X,Y, or Z): denotes time domain signals
-Body denotes that
-
-
-
+Time...(X,Y, or Z): denotes time domain signals 
