@@ -23,7 +23,7 @@ Variable Explanations
   - Laying
 - Subject: ID number denoting the subject performing the activities and gathering data. There were 30 subjects, numbered 1-30.
 
-- Time and Frequency: At the beginning of the variable title; denote whether the data are time domain signals or frequency domain signals- 
+- Time and Frequency: At the beginning of the variable title; denote whether the data are time domain signals or frequency domain signals
 - Body: Denotes that the acceleration data collected was due to bodily movement/acceleration.
 - Gravity: Denotes that the acceleration was due to gravity.
 - Acc: Stands for accelerometer; denotes data that was collected by the smartphone's accelerometer.
