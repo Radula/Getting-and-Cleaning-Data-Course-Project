@@ -21,13 +21,20 @@ If you're using RGui,
 - Scroll through the list of packages until you see the one you want, then select it and click "OK", or simply double-click it
 
 
-run_analysis.R is an R script that ultimately generates a tidy data set from Human Activity Recognition (HAR) data collected from Samsung Galaxy S smartphones.
+run_analysis.R is an R script that ultimately generates a tidy data set from Human Activity Recognition (HAR) data collected from Samsung Galaxy S smartphones. The values in the data frame are acceleration and angular velocity values (acceleration for values collected by accelerometer, angular velocity for values collected by gyroscope)
 
 First, it downloads and unzips the .zip file containing the data into your default working directory. Then, it extracts the "test" and "train" data sets along with the proper activity label and subject ID data into separate data frames and merges it all into one big data frame (titled bigstuff). 
 
 It then extracts from bigstuff2 only the measurements concerning the mean and standard deviation of each measurement variable, tidies up the column/variable names to be a bit more intuitive, replaces the activity ID numbers with descriptive values (Walking, Sitting, Standing, etc.), and finally returns a tidy data set (titled step5) that contains the average of each variable for each activity and each subject.
 
-The variable measurements/values are acceleration and angular velocity values (acceleration for values collected by accelerometer, angular velocity for values collected by gyroscope)
+Viewing the tidy data frame:
+If you access the tidymeans text file directly from coursera, it will look quite "un-tidy". To view it in R, run this code:
+
+data <- read.table("text file download path goes here", header = TRUE)
+
+View(data)
+
+Note: Make sure the V in View(data) is capitalized
 
 Credits and Acknowledgements:
 
