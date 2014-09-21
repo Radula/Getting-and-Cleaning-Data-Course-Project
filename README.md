@@ -9,16 +9,16 @@ NOTE: You should also install the plyr package BEFORE installing the dplyr packa
 To do this, follow these instructions:
 
 If you're using RStudio,
-1. Go to the "Tools" tab on the toolbar at the top of the window.
-2. Click "Install Packages"
-3. Type the name of the package you want to install in the "Packages" field
-4. Hit enter or click the "Install" button
+- Go to the "Tools" tab on the toolbar at the top of the window.
+- Click "Install Packages"
+- Type the name of the package you want to install in the "Packages" field
+- Hit enter or click the "Install" button
  
 If you're using RGui,
-1. Go to the "Packages" tab on the toolbar at the top of the window.
-2. Click "Install Packages"
-3. Choose the region closest to you when asked to select a CRAN mirror.
-4. Scroll through the list of packages until you see the one you want, then select it and click "OK", or simply double-click it
+- Go to the "Packages" tab on the toolbar at the top of the window.
+- Click "Install Packages"
+- Choose the region closest to you when asked to select a CRAN mirror.
+- Scroll through the list of packages until you see the one you want, then select it and click "OK", or simply double-click it
 
 
 run_analysis.R is an R script that ultimately generates a tidy data set from Human Activity Recognition (HAR) data collected from Samsung Galaxy S smartphones. 
