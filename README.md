@@ -25,10 +25,10 @@ run_analysis.R is an R script that ultimately generates a tidy data set from Hum
 
 First, it downloads and unzips the .zip file containing the data into your default working directory. Then, it extracts the "test" and "train" data sets along with the proper activity label and subject ID data into separate data frames and merges it all into one big data frame (titled bigstuff). 
 
-It then extracts from bigstuff2 only the measurements concerning the mean and standard deviation of each measurement variable, tidies up the column/variable names to be a bit more intuitive, replaces the activity ID numbers with descriptive values (Walking, Sitting, Standing, etc.), and finally returns a tidy data set (titled step5) that contains the average of each variable for each activity and each subject.
+It then extracts from bigstuff2 only the measurements concerning the mean and standard deviation of each measurement variable, tidies up the column/variable names to be a bit more intuitive, replaces the activity ID numbers with descriptive values (Walking, Sitting, Standing, etc.), and finally returns a tidy data set (titled tidymeans) that contains the average of each variable for each activity and each subject.
 
 Viewing the tidy data frame:
-If you access the tidymeans text file directly from coursera, it will look quite "un-tidy". To view it in R, run this code:
+If you access the tidymeans text file directly from coursera, it will look "un-tidy". To view it in R, where it will look tidy,  run this code:
 
 data <- read.table("text file download path goes here", header = TRUE)
 
